@@ -1,0 +1,23 @@
+### GET Currently flying airplane 
+
+https://opensky-network.org/api/states/all?lamin=54.3469312018877&lomin=17.737143496314616&lamax=54.779006217854324&lomax=18.5851145555605
+
+54.3469312018877, 18.5851145555605
+54.34845306717886, 18.550736284357615
+
+54.46949730493161, 17.737143496314616
+
+54.779006217854324, 18.384978373614565
+
+### GET Arrivals GDN airport
+https://robosek:testtest19@opensky-network.org/api/flights/arrival?airport=EPGD&begin=1607809930&end=1607810050
+
+### GET Departures GDN airport
+https://robosek:testtest19@opensky-network.org/api/flights/arrival?airport=EPGD&begin=1607382000&end=1607468400
+
+### GET All flights
+https://robosek:testtest19@opensky-network.org/api/flights/aircraft?icao24=48e829&begin=1607812440&end=1607812440
+
+
+### GET test
+https://robosek:testtest19@opensky-network.org/api/flights/arrival?airport=EPGD&begin=1608415516&end=1608501916

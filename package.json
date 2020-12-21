@@ -1,0 +1,13 @@
+{
+  "name": "mmm-airplane-tracker",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Robert Sęk",
+  "license": "ISC",
+  "devDependencies": {
+    "miragejs": "^0.1.41"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
