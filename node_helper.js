@@ -17,6 +17,7 @@ module.exports = NodeHelper.create({
             this.config = payload;
         }
 
+        console.log(self.config.refreshInterval)
         if (!this.isInitialized) {
             self.getFlights();
 
@@ -49,6 +50,7 @@ module.exports = NodeHelper.create({
         var queryParam = 'max=' + self.config.maxItemsToFetch;
         var generateUrl = (direction) => `${self.config.airportTimetableApiUrl}/${direction}?${queryParam}`
 
+        self.sendSocketNotification('NEW_FETCH', null);
         fetchFlights(sendNotificationSuccess('arrival'), sendNotificationError)(generateUrl("arrivals"))
         fetchFlights(sendNotificationSuccess('departure'), sendNotificationError)(generateUrl("departures"))
     }

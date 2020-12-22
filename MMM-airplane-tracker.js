@@ -37,6 +37,9 @@ Module.register("MMM-airplane-tracker", {
                 this.updateFlights(data);
                 this.updateDom();
                 break;
+            case 'NEW_FETCH':
+                this.flights = new Set();
+                break;
             case FETCH_ERROR:
                 this.message = 'Problem z pobraniem lotów...'
                 this.flights = new Set();
@@ -107,7 +110,7 @@ Module.register("MMM-airplane-tracker", {
         else {
             var sortedFlights = Array.from(this.flights)
                 .map(flight => JSON.parse(flight))
-                .sort(this.sortFlightsByTime)
+            //.sort(this.sortFlightsByTime)
             var table_arrivals = this.renderTable(sortedFlights)
             wrapper.appendChild(table_arrivals);
 
